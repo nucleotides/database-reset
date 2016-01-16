@@ -5,3 +5,6 @@ set -o nounset
 
 PGPASSWORD=${RDS_PASSWORD} \
 	psql --dbname=${RDS_DB_NAME} --host=${RDS_HOSTNAME} --port=${RDS_PORT} --username=${RDS_USERNAME} $@
+
+# This keeps the Docker image running afterwards
+sleep infinity
